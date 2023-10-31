@@ -1,0 +1,9 @@
+.desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #27436d;
+  height: 1024px;
+  width: 1440px;
+  min-height: 100vh;
+}

@@ -1,0 +1,88 @@
+.sidebar {
+  align-items: center;
+  background-color: #ffb39c;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 123px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 97px;
+  height: 796px;
+  justify-content: center;
+  left: 38px;
+  padding: 20px 44px;
+  top: 69px;
+}
+
+.main-actions {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  height: 297px;
+  justify-content: center;
+  padding: 62px 0px 0px;
+  position: relative;
+}
+
+.text-wrapper {
+  color: #000000;
+  font-family: 'Luckiest Guy-Regular', Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 4.56px;
+  line-height: 63.6px;
+  margin-top: -11.5px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.div {
+  color: #000000;
+  font-family: 'Luckiest Guy-Regular', Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 4.56px;
+  line-height: 63.6px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.text-wrapper-2 {
+  color: #000000;
+  font-family: 'Luckiest Guy-Regular', Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 4.56px;
+  line-height: 63.6px;
+  margin-bottom: -9.5px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.illustra {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+  height: 231px;
+  justify-content: center;
+  position: relative;
+}
+
+.text-wrapper-3 {
+  color: #000000;
+  font-family: 'Luckiest Guy-Regular', Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 1.9px;
+  line-height: 26.5px;
+  position: relative;
+  white-space: nowrap;
+  width: 85px;
+}

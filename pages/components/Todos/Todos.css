@@ -1,0 +1,114 @@
+.todo-app {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 50px;
+  /* position: absolute; */
+  top: 69px;
+  padding: 20px;
+  border-radius: 15px;
+  width: 50%;
+  margin: 30px auto;
+}
+
+.todo-title {
+  align-self: center;
+  color: #2c3e50;
+  font-family: 'Luckiest Guy-Regular', Helvetica;
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #e82c2c;
+  border-radius: 15px;
+  outline: none;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.todo-list {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  /* border-bottom: 3px solid #a25ce0; */
+}
+
+.todo-checkbox {
+  margin-right: 15px;
+}
+
+.edit-input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  outline: none;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.create-btn,
+.add-btn,
+.save-btn {
+  background-color: #a25ce0;
+  border: none;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 15px;
+  color: white;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.create-btn:hover,
+.add-btn:hover,
+.save-btn:hover {
+  background-color: #d060e9;
+}
+
+.delete-icon {
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-icon:hover {
+  background-color: #c0392b;
+}
+
+.editable-text {
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #2980b9;
+}
+
+.editable-text:hover {
+  color: #3498db;
+}

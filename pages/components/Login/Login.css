@@ -1,0 +1,63 @@
+.centered-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  border-radius: 50px;
+  background: #af87ef;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 453px;
+  height: 629px;
+}
+
+.login-header {
+  width: 291px;
+  color: #a6f2bb;
+  font-family: Luckiest Guy;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 132.523%; /* 31.805px */
+  letter-spacing: 2.28px;
+}
+
+.login-input {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 14px;
+  border: 0px solid #000;
+  background: #98efd0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.login-button {
+  margin-top: 15px;
+  margin-left: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  color: #ececec;
+  cursor: pointer;
+  background-color: #ea79b9;
+}
+
+.login-terms {
+  margin-top: 200px;
+  color: #a6f2bb;
+  font-family: Luckiest Guy;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 132.523%; /* 17.228px */
+  letter-spacing: 1.235px;
+}
+
+/* You can further style and adjust based on your design in Figma. */

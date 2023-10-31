@@ -1,0 +1,27 @@
+.secondillustra {
+  width: 323px;
+  height: 297px;
+  flex-shrink: 0;
+}
+
+.main-content {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 10px;
+  left: 347px;
+  top: 69px;
+}
+
+.rectangle {
+  display: flex;
+  background-color: #ffb39c;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 142px;
+  height: 796px;
+  width: 1048px;
+}
+
+.img {
+  align-self: center;
+}
