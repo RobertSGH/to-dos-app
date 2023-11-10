@@ -1,5 +1,5 @@
 import dbConnect from '@/pages/lib/mongo';
-import TodoModel from '@/pages/models/Todo';
+import TodoModel from '@/pages/api/models/Todo';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 dbConnect();

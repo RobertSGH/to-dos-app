@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { FC, useCallback } from 'react';
 import MySvgComponent from '../SVG/SecondSVG';
 
-export const LeftContainer: React.FC = () => {
+interface Props {
+  setActiveComponent: (component: string) => void;
+}
+
+export const LeftContainer: React.FC<Props> = ({ setActiveComponent }) => {
+  const handleComponentChange = useCallback(
+    (component: string) => {
+      setActiveComponent(component);
+    },
+    [setActiveComponent]
+  );
+
   return (
     <div className='sidebar'>
       <div className='main-actions'>
-        <div className='text-wrapper'>to-dos</div>
-        <div className='div'>notes</div>
-        <div className='div'>user</div>
-        <div className='text-wrapper-2'>cards</div>
+        <button onClick={() => handleComponentChange('todos')}>To-dos</button>
+        <button onClick={() => handleComponentChange('notes')}>Notes</button>
+        <button onClick={() => handleComponentChange('cards')}>Cards</button>
+        <button onClick={() => handleComponentChange('user')}>User</button>
       </div>
       <div className='illustra'>
         <MySvgComponent />
       </div>
-      <div className='text-wrapper-3'>logout</div>
+      <button>Logout</button>
     </div>
   );
 };

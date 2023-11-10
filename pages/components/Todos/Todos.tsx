@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useAppState } from '@/pages/Context/AppContext';
 import { Todo } from '@/pages/Context/Types';
 import axios from '@/node_modules/axios/index';
+import getFormattedDate from '../helpers';
+import usePagination from '@/pages/Hooks/usePagination';
 
 const Todos: React.FC = () => {
   const { state, dispatch } = useAppState();
@@ -9,6 +11,10 @@ const Todos: React.FC = () => {
   const [isInputVisible, setIsInputVisible] = useState(false);
   const [editingTodoId, setEditingTodoId] = useState<string | null>(null);
   const [editingContent, setEditingContent] = useState('');
+  const { currentData, jump, currentPage, maxPage } = usePagination(
+    state.todos,
+    4
+  );
 
   const startEditing = (todo: Todo) => {
     setEditingTodoId(todo._id);
@@ -43,6 +49,8 @@ const Todos: React.FC = () => {
     };
     fetchData();
   }, [dispatch]);
+
+  console.log(state);
 
   // Add a new todo
   const addTodo = async () => {
@@ -104,7 +112,7 @@ const Todos: React.FC = () => {
         </div>
       )}
       <ul className='todo-list'>
-        {state.todos.map((todo) => (
+        {currentData().map((todo) => (
           <li key={todo._id} className='todo-item'>
             <input
               type='checkbox'
@@ -112,6 +120,7 @@ const Todos: React.FC = () => {
               onChange={() => toggleTodo(todo._id, todo.completed)}
               className='todo-checkbox'
             />
+
             {editingTodoId === todo._id ? (
               <>
                 <input
@@ -126,12 +135,18 @@ const Todos: React.FC = () => {
               </>
             ) : (
               <>
-                <span
-                  onClick={() => startEditing(todo)}
-                  className='editable-text'
-                >
-                  {todo.completed ? <s>{todo.content}</s> : todo.content}
-                </span>
+                <div>
+                  <span
+                    onClick={() => startEditing(todo)}
+                    className='editable-text'
+                  >
+                    {todo.completed ? <s>{todo.content}</s> : todo.content}
+                  </span>
+                  <div className='date'>
+                    {getFormattedDate(todo.created_at)}
+                  </div>
+                </div>
+
                 <span
                   onClick={() => {
                     if (
@@ -152,6 +167,20 @@ const Todos: React.FC = () => {
           </li>
         ))}
       </ul>
+      <div>
+        <button
+          onClick={() => jump(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        <button
+          onClick={() => jump(currentPage + 1)}
+          disabled={currentPage === maxPage}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 };
